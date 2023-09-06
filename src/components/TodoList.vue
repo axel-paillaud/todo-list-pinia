@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia';
 const store = useTodoListStore();
 
 const { todoList } = storeToRefs(store);
-const { toggleCompleted } = store;
+const { toggleCompleted, deleteTodo } = store;
 
 </script>
 
@@ -14,6 +14,7 @@ const { toggleCompleted } = store;
     <li class="list-item" v-for="todo in todoList" :key="todo.id">
       <span :class="{ completed: todo.completed }">{{ todo.item  }}</span>
       <span class="checkmark" @click.stop="toggleCompleted(todo.id)">&#10004;</span>
+      <span @click="deleteTodo(todo.id)" class="x">&#10060;</span>
     </li>
   </ul>
 </template>
@@ -32,7 +33,7 @@ const { toggleCompleted } = store;
   text-decoration: line-through;
 }
 
-.checkmark {
+.checkmark, .x {
   cursor: pointer;
 }
 </style>
