@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  TODO APP (parent)
+  TODO APP
   <TodoForm />
   <TodoList />
 </template>
