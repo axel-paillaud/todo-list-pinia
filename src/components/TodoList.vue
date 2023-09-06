@@ -1,10 +1,10 @@
 <script setup>
-  import TodoApp from '/src/components/TodoApp.vue';
 </script>
 
 <template>
-  <TodoApp />
+  TODO LIST (child)
 </template>
 
 <style scoped>
 </style>
+
